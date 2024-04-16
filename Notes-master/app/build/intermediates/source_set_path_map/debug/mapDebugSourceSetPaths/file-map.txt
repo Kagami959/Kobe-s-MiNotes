@@ -1,0 +1,7 @@
+net.micode.notes.app-pngs-0 D:\C\xiaomi\Notes-master\app\build\generated\res\pngs\debug
+net.micode.notes.app-resValues-1 D:\C\xiaomi\Notes-master\app\build\generated\res\resValues\debug
+net.micode.notes.app-mergeDebugResources-2 D:\C\xiaomi\Notes-master\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+net.micode.notes.app-mergeDebugResources-3 D:\C\xiaomi\Notes-master\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+net.micode.notes.app-debug-4 D:\C\xiaomi\Notes-master\app\build\intermediates\merged_res\debug\mergeDebugResources
+net.micode.notes.app-debug-5 D:\C\xiaomi\Notes-master\app\src\debug\res
+net.micode.notes.app-main-6 D:\C\xiaomi\Notes-master\app\src\main\res

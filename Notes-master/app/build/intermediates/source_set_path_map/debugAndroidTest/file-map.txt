@@ -1,0 +1,7 @@
+net.micode.notes.test.app-androidTest-0 D:\C\xiaomi\Notes-master\app\build\generated\res\resValues\androidTest\debug
+net.micode.notes.test.app-androidTest-1 D:\C\xiaomi\Notes-master\app\build\generated\res\rs\androidTest\debug
+net.micode.notes.test.app-mergeDebugAndroidTestResources-2 D:\C\xiaomi\Notes-master\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+net.micode.notes.test.app-mergeDebugAndroidTestResources-3 D:\C\xiaomi\Notes-master\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+net.micode.notes.test.app-merged_res-4 D:\C\xiaomi\Notes-master\app\build\intermediates\merged_res\debugAndroidTest
+net.micode.notes.test.app-androidTest-5 D:\C\xiaomi\Notes-master\app\src\androidTest\res
+net.micode.notes.test.app-androidTestDebug-6 D:\C\xiaomi\Notes-master\app\src\androidTestDebug\res
