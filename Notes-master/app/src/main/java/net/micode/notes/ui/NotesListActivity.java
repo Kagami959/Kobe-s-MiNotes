@@ -466,6 +466,17 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         builder.show();
     }
 
+    /*
+     这段代码是Android开发中的一个方法，用于创建一个新笔记。下面是代码的详细解释：
+1. `private void createNewNote() { ... }`：这是一个私有的方法，用于启动一个活动（Activity），在这个活动中可以创建或编辑一个新的笔记。
+2. `Intent intent = new Intent(this, NoteEditActivity.class);`：创建一个`Intent`对象，这个对象用于在Android系统中启动活动。`this`表示上下文（Context），`NoteEditActivity.class`表示要启动的活动类。
+3. `intent.setAction(Intent.ACTION_INSERT_OR_EDIT);`：设置`Intent`的动作。`Intent.ACTION_INSERT_OR_EDIT`是一个常量，表示这个`Intent`的目的是插入或编辑数据。
+4. `intent.putExtra(Notes.INTENT_EXTRA_FOLDER_ID, mCurrentFolderId);`：向`Intent`中添加一个额外的数据。`Notes.INTENT_EXTRA_FOLDER_ID`是一个字符串，用于标识要附加的数据，`mCurrentFolderId`是要添加的数据值，表示当前文件夹的ID。
+5. `this.startActivityForResult(intent, REQUEST_CODE_NEW_NODE);`：启动一个新的活动，并请求一个结果。`startActivityForResult`是`Activity`类的一个方法，它接收两个参数：要启动的`Intent`和请求代码（`REQUEST_CODE_NEW_NODE`）。请求代码是一个整数值，用于在收到结果时识别这个请求。
+总的来说，这个方法用于启动一个新的活动（`NoteEditActivity`），在这个活动中可以创建或编辑一个新的笔记。同时，它还传递了当前文件夹的ID，并请求一个结果，以便在活动结束后可以处理结果。
+
+     */
+
     private void createNewNote() {
         Intent intent = new Intent(this, NoteEditActivity.class);
         intent.setAction(Intent.ACTION_INSERT_OR_EDIT);
