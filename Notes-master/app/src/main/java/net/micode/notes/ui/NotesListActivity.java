@@ -521,6 +521,24 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         }.execute();
     }
 
+/*
+  这段代码是Android开发中的一个方法，用于删除一个文件夹。下面是代码的详细解释：
+1. `private void deleteFolder(long folderId) { ... }`：这是一个私有的方法，用于删除指定ID的文件夹。
+2. `if (folderId == Notes.ID_ROOT_FOLDER) { ... }`：检查传入的`folderId`是否是根文件夹的ID。如果是，则记录一个错误日志并返回，因为根文件夹不应该被删除。
+3. `HashSet<Long> ids = new HashSet<Long>();`：创建一个`HashSet`来存储要删除的文件夹ID。
+4. `ids.add(folderId);`：将传入的`folderId`添加到`HashSet`中。
+5. `HashSet<AppWidgetAttribute> widgets = DataUtils.getFolderNoteWidget(mContentResolver, folderId);`：调用`DataUtils`的`getFolderNoteWidget`方法，获取与要删除的文件夹相关联的所有小部件（App Widgets）的属性。
+6. `if (!isSyncMode()) { ... }`：检查是否处于同步模式。如果不是，则直接删除文件夹中的笔记。
+7. `DataUtils.batchDeleteNotes(mContentResolver, ids);`：调用`DataUtils`的`batchDeleteNotes`方法，批量删除与`ids`中的文件夹ID相关联的笔记。
+8. `} else { ... }`：如果是同步模式，则将文件夹移动到垃圾文件夹，而不是直接删除。
+9. `DataUtils.batchMoveToFolder(mContentResolver, ids, Notes.ID_TRASH_FOLER);`：调用`DataUtils`的`batchMoveToFolder`方法，将文件夹中的笔记移动到垃圾文件夹。
+10. `if (widgets != null) { ... }`：如果存在与文件夹相关联的小部件，则遍历这些小部件。
+11. `updateWidget(widget.widgetId, widget.widgetType);`：对于每个相关的小部件，调用`updateWidget`方法来更新小部件的内容。
+这个方法的主要功能是删除一个文件夹，并根据是否处于同步模式来决定是直接删除还是移动到垃圾文件夹。同时，它还负责更新与被删除文件夹相关联的小部件。
+
+
+ */
+
     private void deleteFolder(long folderId) {
         if (folderId == Notes.ID_ROOT_FOLDER) {
             Log.e(TAG, "Wrong folder id, should not happen " + folderId);
